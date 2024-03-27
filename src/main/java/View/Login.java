@@ -26,29 +26,76 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
+        TextUsuario = new javax.swing.JTextField();
+        TextSenha = new javax.swing.JPasswordField();
+        jLabelTextSenha = new javax.swing.JLabel();
+        jLabelTextUsuario = new javax.swing.JLabel();
+        jLabelTextLogin = new javax.swing.JLabel();
+        jLabelMapleName = new javax.swing.JLabel();
+        jLabelLogoPainel = new javax.swing.JLabel();
+        jLabelFundoPainel = new javax.swing.JLabel();
+        jLabelFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1920, 1080));
+        setMinimumSize(new java.awt.Dimension(1920, 1080));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/background-login.jpg"))); // NOI18N
+        TextUsuario.setAlignmentX(0.0F);
+        TextUsuario.setAlignmentY(0.0F);
+        TextUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextUsuarioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(TextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 560, 200, 40));
+        getContentPane().add(TextSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 650, 200, 40));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addGap(0, 2826, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addGap(0, 1984, Short.MAX_VALUE))
-        );
+        jLabelTextSenha.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
+        jLabelTextSenha.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTextSenha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelTextSenha.setText("Senha");
+        getContentPane().add(jLabelTextSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(716, 600, 490, 50));
+
+        jLabelTextUsuario.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
+        jLabelTextUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTextUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelTextUsuario.setText("Usuário");
+        getContentPane().add(jLabelTextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(716, 510, 490, 50));
+
+        jLabelTextLogin.setFont(new java.awt.Font("Impact", 0, 26)); // NOI18N
+        jLabelTextLogin.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTextLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelTextLogin.setText("Login");
+        getContentPane().add(jLabelTextLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(716, 440, 490, 80));
+
+        jLabelMapleName.setFont(new java.awt.Font("Impact", 0, 30)); // NOI18N
+        jLabelMapleName.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelMapleName.setText("Maple System Resources");
+        getContentPane().add(jLabelMapleName, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 335, -1, 100));
+
+        jLabelLogoPainel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabelLogoPainel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelLogoPainel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/logo-sem-fundo150x150.png"))); // NOI18N
+        jLabelLogoPainel.setToolTipText("");
+        jLabelLogoPainel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabelLogoPainel.setVerifyInputWhenFocusTarget(false);
+        getContentPane().add(jLabelLogoPainel, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 310, 150, 150));
+        jLabelLogoPainel.getAccessibleContext().setAccessibleName("");
+
+        jLabelFundoPainel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelFundoPainel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Icons/painel-login.png"))); // NOI18N
+        getContentPane().add(jLabelFundoPainel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1080));
+
+        jLabelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/background-login.jpg"))); // NOI18N
+        getContentPane().add(jLabelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1080));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void TextUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -86,6 +133,14 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPasswordField TextSenha;
+    private javax.swing.JTextField TextUsuario;
+    private javax.swing.JLabel jLabelFundo;
+    private javax.swing.JLabel jLabelFundoPainel;
+    private javax.swing.JLabel jLabelLogoPainel;
+    private javax.swing.JLabel jLabelMapleName;
+    private javax.swing.JLabel jLabelTextLogin;
+    private javax.swing.JLabel jLabelTextSenha;
+    private javax.swing.JLabel jLabelTextUsuario;
     // End of variables declaration//GEN-END:variables
 }
