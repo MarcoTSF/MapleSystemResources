@@ -32,24 +32,33 @@ public class MainMenu extends javax.swing.JFrame {
         jMenuItemColaborador = new javax.swing.JMenuItem();
         jMenuItemReserva = new javax.swing.JMenuItem();
         jMenuOperacoes = new javax.swing.JMenu();
+        jMenuRelatorios = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/background-menu.png"))); // NOI18N
         jLabelFundo.setPreferredSize(new java.awt.Dimension(1212, 683));
 
+        jMenuLancamentos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Icons/planning-icon-24.png"))); // NOI18N
         jMenuLancamentos.setText("Lançamentos");
 
+        jMenuItemColaborador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Icons/prof-icon-24.png"))); // NOI18N
         jMenuItemColaborador.setText("Colaborador");
         jMenuLancamentos.add(jMenuItemColaborador);
 
+        jMenuItemReserva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Icons/plus-icon-24.png"))); // NOI18N
         jMenuItemReserva.setText("Reservas");
         jMenuLancamentos.add(jMenuItemReserva);
 
         jMenuBar.add(jMenuLancamentos);
 
+        jMenuOperacoes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Icons/setting-icon-24.png"))); // NOI18N
         jMenuOperacoes.setText("Operação");
         jMenuBar.add(jMenuOperacoes);
+
+        jMenuRelatorios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Icons/relatorio-icon-24.png"))); // NOI18N
+        jMenuRelatorios.setText("Relatórios");
+        jMenuBar.add(jMenuRelatorios);
 
         setJMenuBar(jMenuBar);
 
@@ -109,5 +118,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemReserva;
     private javax.swing.JMenu jMenuLancamentos;
     private javax.swing.JMenu jMenuOperacoes;
+    private javax.swing.JMenu jMenuRelatorios;
     // End of variables declaration//GEN-END:variables
 }

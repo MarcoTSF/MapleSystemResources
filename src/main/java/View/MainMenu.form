@@ -6,16 +6,25 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenuLancamentos">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/View/Images/Icons/planning-icon-24.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Lan&#xe7;amentos"/>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemColaborador">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/View/Images/Icons/prof-icon-24.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Colaborador"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemReserva">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/View/Images/Icons/plus-icon-24.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Reservas"/>
               </Properties>
             </MenuItem>
@@ -23,7 +32,18 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenuOperacoes">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/View/Images/Icons/setting-icon-24.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Opera&#xe7;&#xe3;o"/>
+          </Properties>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenuRelatorios">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/View/Images/Icons/relatorio-icon-24.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Relat&#xf3;rios"/>
           </Properties>
         </Menu>
       </SubComponents>
