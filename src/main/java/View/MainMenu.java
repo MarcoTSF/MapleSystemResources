@@ -26,33 +26,42 @@ public class MainMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        jLabelFundo = new javax.swing.JLabel();
+        jMenuBar = new javax.swing.JMenuBar();
+        jMenuLancamentos = new javax.swing.JMenu();
+        jMenuItemColaborador = new javax.swing.JMenuItem();
+        jMenuItemReserva = new javax.swing.JMenuItem();
+        jMenuOperacoes = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/menu-background.png"))); // NOI18N
-        jLabel1.setPreferredSize(new java.awt.Dimension(1212, 683));
+        jLabelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/background-menu.png"))); // NOI18N
+        jLabelFundo.setPreferredSize(new java.awt.Dimension(1212, 683));
 
-        jMenu1.setText("Lançamentos");
-        jMenuBar1.add(jMenu1);
+        jMenuLancamentos.setText("Lançamentos");
 
-        jMenu2.setText("Operação");
-        jMenuBar1.add(jMenu2);
+        jMenuItemColaborador.setText("Colaborador");
+        jMenuLancamentos.add(jMenuItemColaborador);
 
-        setJMenuBar(jMenuBar1);
+        jMenuItemReserva.setText("Reservas");
+        jMenuLancamentos.add(jMenuItemReserva);
+
+        jMenuBar.add(jMenuLancamentos);
+
+        jMenuOperacoes.setText("Operação");
+        jMenuBar.add(jMenuOperacoes);
+
+        setJMenuBar(jMenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1920, Short.MAX_VALUE)
+            .addComponent(jLabelFundo, javax.swing.GroupLayout.DEFAULT_SIZE, 1920, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1080, Short.MAX_VALUE)
+            .addComponent(jLabelFundo, javax.swing.GroupLayout.DEFAULT_SIZE, 1080, Short.MAX_VALUE)
         );
 
         pack();
@@ -94,9 +103,11 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JLabel jLabelFundo;
+    private javax.swing.JMenuBar jMenuBar;
+    private javax.swing.JMenuItem jMenuItemColaborador;
+    private javax.swing.JMenuItem jMenuItemReserva;
+    private javax.swing.JMenu jMenuLancamentos;
+    private javax.swing.JMenu jMenuOperacoes;
     // End of variables declaration//GEN-END:variables
 }
