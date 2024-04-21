@@ -26,6 +26,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButtonEntrar = new javax.swing.JButton();
         TextUsuario = new javax.swing.JTextField();
         TextSenha = new javax.swing.JPasswordField();
         jLabelTextSenha = new javax.swing.JLabel();
@@ -41,6 +42,17 @@ public class Login extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(1920, 1080));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButtonEntrar.setBackground(new java.awt.Color(240, 69, 69));
+        jButtonEntrar.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
+        jButtonEntrar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonEntrar.setText("ENTRAR");
+        jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEntrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(905, 705, 110, 40));
+
         TextUsuario.setAlignmentX(0.0F);
         TextUsuario.setAlignmentY(0.0F);
         TextUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -48,26 +60,26 @@ public class Login extends javax.swing.JFrame {
                 TextUsuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(TextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 560, 200, 40));
-        getContentPane().add(TextSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 650, 200, 40));
+        getContentPane().add(TextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 550, 200, 40));
+        getContentPane().add(TextSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 640, 200, 40));
 
         jLabelTextSenha.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
         jLabelTextSenha.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTextSenha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTextSenha.setText("Senha");
-        getContentPane().add(jLabelTextSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(716, 600, 490, 50));
+        getContentPane().add(jLabelTextSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(717, 590, 489, 50));
 
         jLabelTextUsuario.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
         jLabelTextUsuario.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTextUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTextUsuario.setText("Usuário");
-        getContentPane().add(jLabelTextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(716, 510, 490, 50));
+        getContentPane().add(jLabelTextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(717, 490, 489, 50));
 
         jLabelTextLogin.setFont(new java.awt.Font("Impact", 0, 26)); // NOI18N
         jLabelTextLogin.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTextLogin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelTextLogin.setText("Login");
-        getContentPane().add(jLabelTextLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(716, 440, 490, 80));
+        getContentPane().add(jLabelTextLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(717, 440, 489, 50));
 
         jLabelMapleName.setFont(new java.awt.Font("Impact", 0, 30)); // NOI18N
         jLabelMapleName.setForeground(new java.awt.Color(255, 255, 255));
@@ -96,6 +108,10 @@ public class Login extends javax.swing.JFrame {
     private void TextUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TextUsuarioActionPerformed
+
+    private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonEntrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,6 +151,7 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField TextSenha;
     private javax.swing.JTextField TextUsuario;
+    private javax.swing.JButton jButtonEntrar;
     private javax.swing.JLabel jLabelFundo;
     private javax.swing.JLabel jLabelFundoPainel;
     private javax.swing.JLabel jLabelLogoPainel;

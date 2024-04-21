@@ -52,9 +52,9 @@ public class Reserva extends javax.swing.JFrame {
 
         jTableResultado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
                 "ID", "COLABORADOR", "SERVIÇO", "DATA", "HORA", "OBSERVAÇÃO"
@@ -62,7 +62,7 @@ public class Reserva extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTableResultado);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 620, 1290, 270));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 620, 1250, 270));
 
         lblHora.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblHora.setForeground(new java.awt.Color(255, 255, 255));

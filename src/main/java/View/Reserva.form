@@ -36,7 +36,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="330" y="620" width="1290" height="270"/>
+          <AbsoluteConstraints x="330" y="620" width="1250" height="270"/>
         </Constraint>
       </Constraints>
 
@@ -45,11 +45,10 @@
         <Component class="javax.swing.JTable" name="jTableResultado">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="7" rowCount="3">
+              <Table columnCount="6" rowCount="3">
                 <Column editable="true" title="ID" type="java.lang.Object"/>
-                <Column editable="true" title="CLIENTE" type="java.lang.Object"/>
+                <Column editable="true" title="COLABORADOR" type="java.lang.Object"/>
                 <Column editable="true" title="SERVI&#xc7;O" type="java.lang.Object"/>
-                <Column editable="true" title="VALOR" type="java.lang.Object"/>
                 <Column editable="true" title="DATA" type="java.lang.Object"/>
                 <Column editable="true" title="HORA" type="java.lang.Object"/>
                 <Column editable="true" title="OBSERVA&#xc7;&#xc3;O" type="java.lang.Object"/>
