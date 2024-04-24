@@ -29,12 +29,14 @@ public class Reserva extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTableResultado = new javax.swing.JTable();
         lblHora = new javax.swing.JLabel();
-        lblData = new javax.swing.JLabel();
+        lblDataEntrega = new javax.swing.JLabel();
+        lblDataReserva = new javax.swing.JLabel();
         lblServico = new javax.swing.JLabel();
         lblColaborador = new javax.swing.JLabel();
         lblId1 = new javax.swing.JLabel();
         txfHora = new javax.swing.JTextField();
-        txfData = new javax.swing.JTextField();
+        txfDataEntrega = new javax.swing.JTextField();
+        txfDataReserva = new javax.swing.JTextField();
         selectServico = new javax.swing.JComboBox<>();
         selectColaborador = new javax.swing.JComboBox<>();
         txfId = new javax.swing.JTextField();
@@ -52,12 +54,12 @@ public class Reserva extends javax.swing.JFrame {
 
         jTableResultado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "COLABORADOR", "SERVIÇO", "DATA", "HORA", "OBSERVAÇÃO"
+                "ID", "COLABORADOR", "SERVIÇO", "DATA RESERVA", "DATA ENTREGA", "HORA", "OBSERVAÇÃO"
             }
         ));
         jScrollPane2.setViewportView(jTableResultado);
@@ -68,42 +70,56 @@ public class Reserva extends javax.swing.JFrame {
         lblHora.setForeground(new java.awt.Color(255, 255, 255));
         lblHora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHora.setText("Hora");
-        getContentPane().add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 520, 110, 35));
+        getContentPane().add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 505, 110, 35));
 
-        lblData.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblData.setForeground(new java.awt.Color(255, 255, 255));
-        lblData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblData.setText("Data");
-        getContentPane().add(lblData, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 460, 110, 35));
+        lblDataEntrega.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblDataEntrega.setForeground(new java.awt.Color(255, 255, 255));
+        lblDataEntrega.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDataEntrega.setText("Data de Entrega");
+        getContentPane().add(lblDataEntrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 460, 140, 35));
+        lblDataEntrega.getAccessibleContext().setAccessibleName("Data de Entrega");
+
+        lblDataReserva.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblDataReserva.setForeground(new java.awt.Color(255, 255, 255));
+        lblDataReserva.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDataReserva.setText("Data da Reserva");
+        getContentPane().add(lblDataReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 415, 140, 35));
 
         lblServico.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblServico.setForeground(new java.awt.Color(255, 255, 255));
         lblServico.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblServico.setText("Serviço");
-        getContentPane().add(lblServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, 110, 35));
+        getContentPane().add(lblServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, 110, 35));
 
         lblColaborador.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblColaborador.setForeground(new java.awt.Color(255, 255, 255));
         lblColaborador.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblColaborador.setText("Colaborador");
-        getContentPane().add(lblColaborador, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 340, 110, 35));
+        getContentPane().add(lblColaborador, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 325, 110, 35));
 
         lblId1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblId1.setForeground(new java.awt.Color(255, 255, 255));
         lblId1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblId1.setText("Id");
         getContentPane().add(lblId1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, 110, 35));
-        getContentPane().add(txfHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 520, 320, 35));
-        getContentPane().add(txfData, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 460, 320, 35));
+        getContentPane().add(txfHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 505, 320, 35));
+        getContentPane().add(txfDataEntrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 460, 320, 35));
+
+        txfDataReserva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txfDataReservaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txfDataReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 415, 320, 35));
 
         selectServico.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 selectServicoItemStateChanged(evt);
             }
         });
-        getContentPane().add(selectServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 400, 320, 35));
+        getContentPane().add(selectServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 370, 320, 35));
 
-        getContentPane().add(selectColaborador, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, 320, 35));
+        getContentPane().add(selectColaborador, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 325, 320, 35));
 
         txfId.setText("0");
         txfId.setEnabled(false);
@@ -123,7 +139,7 @@ public class Reserva extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 510, 470, 45));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 495, 470, 45));
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(240, 85));
 
@@ -133,7 +149,7 @@ public class Reserva extends javax.swing.JFrame {
         jTxaObservacao.setRequestFocusEnabled(false);
         jScrollPane1.setViewportView(jTxaObservacao);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 280, 470, 230));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 280, 470, 205));
 
         lblReservar.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         lblReservar.setForeground(new java.awt.Color(255, 255, 255));
@@ -160,6 +176,10 @@ public class Reserva extends javax.swing.JFrame {
 
     private void txfIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txfIdActionPerformed
     }//GEN-LAST:event_txfIdActionPerformed
+
+    private void txfDataReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txfDataReservaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txfDataReservaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,14 +225,16 @@ public class Reserva extends javax.swing.JFrame {
     private javax.swing.JTable jTableResultado;
     private javax.swing.JTextArea jTxaObservacao;
     private javax.swing.JLabel lblColaborador;
-    private javax.swing.JLabel lblData;
+    private javax.swing.JLabel lblDataEntrega;
+    private javax.swing.JLabel lblDataReserva;
     private javax.swing.JLabel lblHora;
     private javax.swing.JLabel lblId1;
     private javax.swing.JLabel lblReservar;
     private javax.swing.JLabel lblServico;
     private javax.swing.JComboBox<String> selectColaborador;
     private javax.swing.JComboBox<String> selectServico;
-    private javax.swing.JTextField txfData;
+    private javax.swing.JTextField txfDataEntrega;
+    private javax.swing.JTextField txfDataReserva;
     private javax.swing.JTextField txfHora;
     private javax.swing.JTextField txfId;
     // End of variables declaration//GEN-END:variables
