@@ -4,17 +4,22 @@
  */
 package View;
 
+import Controller.MainMenuController;
+
 /**
  *
  * @author mtsfs
  */
 public class MainMenu extends javax.swing.JFrame {
 
+    private final MainMenuController controller;
+
     /**
      * Creates new form MainMenu
      */
     public MainMenu() {
         initComponents();
+        controller = new MainMenuController(this);
     }
 
     /**
@@ -48,6 +53,11 @@ public class MainMenu extends javax.swing.JFrame {
 
         jMenuItemReserva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Icons/plus-icon-24.png"))); // NOI18N
         jMenuItemReserva.setText("Reservas");
+        jMenuItemReserva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemReservaActionPerformed(evt);
+            }
+        });
         jMenuLancamentos.add(jMenuItemReserva);
 
         jMenuBar.add(jMenuLancamentos);
@@ -75,6 +85,11 @@ public class MainMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItemReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReservaActionPerformed
+        // TODO add your handling code here:
+        this.controller.abrirReservas();
+    }//GEN-LAST:event_jMenuItemReservaActionPerformed
 
     /**
      * @param args the command line arguments
