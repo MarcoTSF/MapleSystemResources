@@ -65,6 +65,10 @@ public class Reserva {
     public Date getDataReserva() {
         return dataReserva;
     }
+    
+    public String getDataReservaFormatada(){
+        return new SimpleDateFormat("dd/MM/yyyy").format(dataReserva);
+    }
 
     public void setDataReserva(Date dataReserva) {
         this.dataReserva = dataReserva;
@@ -72,6 +76,14 @@ public class Reserva {
 
     public Date getDataEntrega() {
         return dataEntrega;
+    }
+    
+    public String getDataEntregaFormatada(){
+        return new SimpleDateFormat("dd/MM/yyyy").format(dataEntrega);
+    }
+    
+    public String getHoraEntregaFormatada(){
+        return new SimpleDateFormat("HH:mm").format(dataEntrega);
     }
 
     public void setDataEntrega(Date dataEntrega) {

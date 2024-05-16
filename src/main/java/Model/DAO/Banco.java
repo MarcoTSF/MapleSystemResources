@@ -34,8 +34,8 @@ public class Banco {
         
         //criando elementos
         
-        Usuario usuario1 = new Usuario(1, "Marco Tulio Salvador", "adm1@una", "administrador", "31990905050", "adm1@alunouna.com");
-        Usuario usuario2 = new Usuario(2, "Daniel Jones", "func1@una", "funcionario", "31980804040", "func1@alunouna.com");
+        Usuario usuario1 = new Usuario(1, "Marco Tulio Salvador", "adm1", "administrador", "31990905050", "adm1@alunouna.com");
+        Usuario usuario2 = new Usuario(2, "Daniel Jones", "func1", "funcionario", "31980804040", "func1@alunouna.com");
         
         Colaborador colaborador1 = new Colaborador(1, "Alan Figueiredo", "31950506060", "alan@test.com", "Engenharia do Produto");
         Colaborador colaborador2 = new Colaborador(2, "Judite Oliveira", "31980807070", "judite@test.com", "Produção");

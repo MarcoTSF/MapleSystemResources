@@ -4,17 +4,24 @@
  */
 package View;
 
+import Controller.ReservaController;
+import javax.swing.JTable;
+
 /**
  *
  * @author mtsfs
  */
 public class Reserva extends javax.swing.JFrame {
 
+    private final ReservaController controller;
+
     /**
      * Creates new form Reserva
      */
     public Reserva() {
         initComponents();
+        controller = new ReservaController(this);
+        iniciar();
     }
 
     /**
@@ -27,7 +34,7 @@ public class Reserva extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTableResultado = new javax.swing.JTable();
+        jTableReserva = new javax.swing.JTable();
         lblHora = new javax.swing.JLabel();
         lblDataEntrega = new javax.swing.JLabel();
         lblDataReserva = new javax.swing.JLabel();
@@ -47,12 +54,12 @@ public class Reserva extends javax.swing.JFrame {
         jLabelReservaFundo = new javax.swing.JLabel();
         jLabelFundo = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jScrollPane2.setPreferredSize(new java.awt.Dimension(450, 400));
 
-        jTableResultado.setModel(new javax.swing.table.DefaultTableModel(
+        jTableReserva.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -62,7 +69,7 @@ public class Reserva extends javax.swing.JFrame {
                 "ID", "COLABORADOR", "SERVIÇO", "DATA RESERVA", "DATA ENTREGA", "HORA", "OBSERVAÇÃO"
             }
         ));
-        jScrollPane2.setViewportView(jTableResultado);
+        jScrollPane2.setViewportView(jTableReserva);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 620, 1250, 270));
 
@@ -77,7 +84,6 @@ public class Reserva extends javax.swing.JFrame {
         lblDataEntrega.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDataEntrega.setText("Data de Entrega");
         getContentPane().add(lblDataEntrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 460, 140, 35));
-        lblDataEntrega.getAccessibleContext().setAccessibleName("Data de Entrega");
 
         lblDataReserva.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblDataReserva.setForeground(new java.awt.Color(255, 255, 255));
@@ -158,7 +164,7 @@ public class Reserva extends javax.swing.JFrame {
         getContentPane().add(lblReservar, new org.netbeans.lib.awtextra.AbsoluteConstraints(215, 150, 1480, 110));
 
         jLabelReservaFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Icons/reserva-painel-fundo.png"))); // NOI18N
-        getContentPane().add(jLabelReservaFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, -1, -1));
+        getContentPane().add(jLabelReservaFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, -1, -1));
 
         jLabelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/background-menu-clean.png"))); // NOI18N
         getContentPane().add(jLabelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1080));
@@ -222,7 +228,7 @@ public class Reserva extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelReservaFundo;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTableResultado;
+    private javax.swing.JTable jTableReserva;
     private javax.swing.JTextArea jTxaObservacao;
     private javax.swing.JLabel lblColaborador;
     private javax.swing.JLabel lblDataEntrega;
@@ -238,4 +244,16 @@ public class Reserva extends javax.swing.JFrame {
     private javax.swing.JTextField txfHora;
     private javax.swing.JTextField txfId;
     // End of variables declaration//GEN-END:variables
+
+    private void iniciar() {
+        this.controller.atualizaTabela();
+    }
+
+    public JTable getjTableReserva() {
+        return jTableReserva;
+    }
+
+    public void setjTableReserva(JTable jTableReserva) {
+        this.jTableReserva = jTableReserva;
+    }
 }
