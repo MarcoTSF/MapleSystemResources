@@ -4,8 +4,11 @@
  */
 package Controller.Helper;
 
+import Model.Colaborador;
+import Model.Servico;
 import View.Reserva;
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -34,6 +37,22 @@ public class ReservaHelper {
                 reserva.getHoraEntregaFormatada(),
                 reserva.getObservacao()
             });
+        }
+    }
+
+    public void preencherColaboradores(ArrayList<Colaborador> colaboradores) {
+        DefaultComboBoxModel comboBoxModel = (DefaultComboBoxModel) view.getjComboBoxColaborador().getModel();
+        
+        for (Colaborador colaborador : colaboradores) {
+            comboBoxModel.addElement(colaborador);
+        }
+    }
+
+    public void preencherServico(ArrayList<Servico> servicos) {
+        DefaultComboBoxModel comboBoxModel = (DefaultComboBoxModel) view.getjComboBoxServico().getModel();
+        
+        for (Servico servico : servicos) {
+            comboBoxModel.addElement(servico);
         }
     }
 }

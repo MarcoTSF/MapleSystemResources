@@ -5,7 +5,11 @@
 package Controller;
 
 import Controller.Helper.ReservaHelper;
+import Model.Colaborador;
+import Model.DAO.ColaboradorDAO;
 import Model.DAO.ReservaDAO;
+import Model.DAO.ServicoDAO;
+import Model.Servico;
 import View.Reserva;
 import java.util.ArrayList;
 
@@ -28,5 +32,21 @@ public class ReservaController {
         ArrayList<Model.Reserva> reservas = reservaDAO.selectAll();
         
         helper.preencherTabela(reservas);
+    }
+    
+    public void atualizaColaborador(){
+        
+        ColaboradorDAO colaboradorDAO = new ColaboradorDAO();   
+        ArrayList<Colaborador> colaboradores = colaboradorDAO.selectAll();
+        
+        helper.preencherColaboradores(colaboradores);
+    }
+    
+    public void atualizaServico(){
+        
+        ServicoDAO servicoDAO = new ServicoDAO();   
+        ArrayList<Servico> servicos = servicoDAO.selectAll();
+        
+        helper.preencherServico(servicos);
     }
 }

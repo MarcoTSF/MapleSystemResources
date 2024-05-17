@@ -5,6 +5,7 @@
 package View;
 
 import Controller.ReservaController;
+import javax.swing.JComboBox;
 import javax.swing.JTable;
 
 /**
@@ -44,8 +45,8 @@ public class Reserva extends javax.swing.JFrame {
         txfHora = new javax.swing.JTextField();
         txfDataEntrega = new javax.swing.JTextField();
         txfDataReserva = new javax.swing.JTextField();
-        selectServico = new javax.swing.JComboBox<>();
-        selectColaborador = new javax.swing.JComboBox<>();
+        jComboBoxServico = new javax.swing.JComboBox<>();
+        jComboBoxColaborador = new javax.swing.JComboBox<>();
         txfId = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -118,14 +119,14 @@ public class Reserva extends javax.swing.JFrame {
         });
         getContentPane().add(txfDataReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 415, 320, 35));
 
-        selectServico.addItemListener(new java.awt.event.ItemListener() {
+        jComboBoxServico.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                selectServicoItemStateChanged(evt);
+                jComboBoxServicoItemStateChanged(evt);
             }
         });
-        getContentPane().add(selectServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 370, 320, 35));
+        getContentPane().add(jComboBoxServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 370, 320, 35));
 
-        getContentPane().add(selectColaborador, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 325, 320, 35));
+        getContentPane().add(jComboBoxColaborador, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 325, 320, 35));
 
         txfId.setText("0");
         txfId.setEnabled(false);
@@ -176,9 +177,9 @@ public class Reserva extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void selectServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_selectServicoItemStateChanged
+    private void jComboBoxServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxServicoItemStateChanged
         
-    }//GEN-LAST:event_selectServicoItemStateChanged
+    }//GEN-LAST:event_jComboBoxServicoItemStateChanged
 
     private void txfIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txfIdActionPerformed
     }//GEN-LAST:event_txfIdActionPerformed
@@ -224,6 +225,8 @@ public class Reserva extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBoxColaborador;
+    private javax.swing.JComboBox<String> jComboBoxServico;
     private javax.swing.JLabel jLabelFundo;
     private javax.swing.JLabel jLabelReservaFundo;
     private javax.swing.JScrollPane jScrollPane1;
@@ -237,8 +240,6 @@ public class Reserva extends javax.swing.JFrame {
     private javax.swing.JLabel lblId1;
     private javax.swing.JLabel lblReservar;
     private javax.swing.JLabel lblServico;
-    private javax.swing.JComboBox<String> selectColaborador;
-    private javax.swing.JComboBox<String> selectServico;
     private javax.swing.JTextField txfDataEntrega;
     private javax.swing.JTextField txfDataReserva;
     private javax.swing.JTextField txfHora;
@@ -247,6 +248,8 @@ public class Reserva extends javax.swing.JFrame {
 
     private void iniciar() {
         this.controller.atualizaTabela();
+        this.controller.atualizaColaborador();
+        this.controller.atualizaServico();
     }
 
     public JTable getjTableReserva() {
@@ -255,5 +258,21 @@ public class Reserva extends javax.swing.JFrame {
 
     public void setjTableReserva(JTable jTableReserva) {
         this.jTableReserva = jTableReserva;
+    }
+
+    public JComboBox<String> getjComboBoxColaborador() {
+        return jComboBoxColaborador;
+    }
+
+    public void setjComboBoxColaborador(JComboBox<String> jComboBoxColaborador) {
+        this.jComboBoxColaborador = jComboBoxColaborador;
+    }
+
+    public JComboBox<String> getjComboBoxServico() {
+        return jComboBoxServico;
+    }
+
+    public void setjComboBoxServico(JComboBox<String> jComboBoxServico) {
+        this.jComboBoxServico = jComboBoxServico;
     }
 }
