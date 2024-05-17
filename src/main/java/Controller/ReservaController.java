@@ -9,6 +9,7 @@ import Model.Colaborador;
 import Model.DAO.ColaboradorDAO;
 import Model.DAO.ReservaDAO;
 import Model.DAO.ServicoDAO;
+import Model.Reservas;
 import Model.Servico;
 import View.Reserva;
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class ReservaController {
     public void atualizaTabela(){
     
         ReservaDAO reservaDAO = new ReservaDAO();
-        ArrayList<Model.Reserva> reservas = reservaDAO.selectAll();
+        ArrayList<Model.Reservas> reservas = reservaDAO.selectAll();
         
         helper.preencherTabela(reservas);
     }
@@ -49,4 +50,12 @@ public class ReservaController {
         
         helper.preencherServico(servicos);
     }
+    
+     public void reservar(){
+            Reservas reservas = helper.obterModelo();
+            new ReservaDAO().insert(reservas);
+            
+            atualizaTabela();
+            helper.limparTela();
+        }
 }

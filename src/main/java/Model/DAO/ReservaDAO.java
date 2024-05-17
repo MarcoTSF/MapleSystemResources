@@ -5,7 +5,7 @@
  */
 package Model.DAO;
 
-import Model.Reserva;
+import Model.Reservas;
 import java.util.ArrayList;
 
 /**
@@ -18,7 +18,7 @@ public class ReservaDAO {
      * Insere uma reserva dentro do banco de dados
      * @param reservar
      */
-    public void insert(Reserva reservar){
+    public void insert(Reservas reservar){
           
         if(reservar.getId() == 0){
             reservar.setId(proximoId());
@@ -33,7 +33,7 @@ public class ReservaDAO {
      * @param reservar
      * @return 
      */
-    public boolean update(Reserva reservar){
+    public boolean update(Reservas reservar){
         
         for (int i = 0; i < Banco.reservar.size(); i++) {
             if(idSaoIguais(Banco.reservar.get(i),reservar)){
@@ -49,8 +49,8 @@ public class ReservaDAO {
      * @param reservar
      * @return 
      */
-    public boolean delete(Reserva reservar){
-        for (Reserva reservaLista : Banco.reservar) {
+    public boolean delete(Reservas reservar){
+        for (Reservas reservaLista : Banco.reservar) {
             if(idSaoIguais(reservaLista,reservar)){
                 Banco.reservar.remove(reservaLista);
                 return true;
@@ -63,7 +63,7 @@ public class ReservaDAO {
      * Retorna um arraylist com todos os agendamentos do banco de dados
      * @return uma lista com todos os registros do banco
      */
-    public ArrayList<Reserva> selectAll(){
+    public ArrayList<Reservas> selectAll(){
         return Banco.reservar;
     }
     
@@ -73,7 +73,7 @@ public class ReservaDAO {
      * @param reservaAComparar
      * @return verdadeiro caso os id forem iguais e falso se nao forem
      */
-    private boolean idSaoIguais(Reserva reservar, Reserva reservaAComparar) {
+    private boolean idSaoIguais(Reservas reservar, Reservas reservaAComparar) {
         return reservar.getId() ==  reservaAComparar.getId();
     }
     
@@ -81,7 +81,7 @@ public class ReservaDAO {
         
         int maiorId = 0;
         
-        for (Reserva reservar : Banco.reservar) {           
+        for (Reservas reservar : Banco.reservar) {           
            int id = reservar.getId();
             
             if(maiorId < id){

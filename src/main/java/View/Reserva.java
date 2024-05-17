@@ -7,6 +7,8 @@ package View;
 import Controller.ReservaController;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 /**
  *
@@ -174,7 +176,7 @@ public class Reserva extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+        this.controller.reservar();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBoxServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxServicoItemStateChanged
@@ -185,7 +187,7 @@ public class Reserva extends javax.swing.JFrame {
     }//GEN-LAST:event_txfIdActionPerformed
 
     private void txfDataReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txfDataReservaActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_txfDataReservaActionPerformed
 
     /**
@@ -274,5 +276,45 @@ public class Reserva extends javax.swing.JFrame {
 
     public void setjComboBoxServico(JComboBox<String> jComboBoxServico) {
         this.jComboBoxServico = jComboBoxServico;
+    }
+
+    public JTextField getTxfDataEntrega() {
+        return txfDataEntrega;
+    }
+
+    public void setTxfDataEntrega(JTextField txfDataEntrega) {
+        this.txfDataEntrega = txfDataEntrega;
+    }
+
+    public JTextField getTxfDataReserva() {
+        return txfDataReserva;
+    }
+
+    public void setTxfDataReserva(JTextField txfDataReserva) {
+        this.txfDataReserva = txfDataReserva;
+    }
+
+    public JTextField getTxfHora() {
+        return txfHora;
+    }
+
+    public void setTxfHora(JTextField txfHora) {
+        this.txfHora = txfHora;
+    }
+
+    public JTextField getTxfId() {
+        return txfId;
+    }
+
+    public void setTxfId(JTextField txfId) {
+        this.txfId = txfId;
+    }
+
+    public JTextArea getjTxaObservacao() {
+        return jTxaObservacao;
+    }
+
+    public void setjTxaObservacao(JTextArea jTxaObservacao) {
+        this.jTxaObservacao = jTxaObservacao;
     }
 }

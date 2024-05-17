@@ -5,6 +5,7 @@
 package Controller.Helper;
 
 import Model.Colaborador;
+import Model.Reservas;
 import Model.Servico;
 import View.Reserva;
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author mtsfs
  */
-public class ReservaHelper {
+public class ReservaHelper implements iHelper{
     
     private final Reserva view;
 
@@ -23,11 +24,11 @@ public class ReservaHelper {
         this.view = view;
     }
 
-    public void preencherTabela(ArrayList<Model.Reserva> reservas) {
+    public void preencherTabela(ArrayList<Model.Reservas> reservas) {
         DefaultTableModel tableModel = (DefaultTableModel) view.getjTableReserva().getModel();
         tableModel.setNumRows(0);
         
-        for (Model.Reserva reserva : reservas) {
+        for (Model.Reservas reserva : reservas) {
             tableModel.addRow(new Object[]{
                 reserva.getId(),
                 reserva.getColaborador().getNome(),
@@ -54,5 +55,38 @@ public class ReservaHelper {
         for (Servico servico : servicos) {
             comboBoxModel.addElement(servico);
         }
+    }
+    
+    public Colaborador obterColaborador(){
+        return (Colaborador) view.getjComboBoxColaborador().getSelectedItem();
+    }
+    
+    public Servico obterServico(){
+        return (Servico) view.getjComboBoxServico().getSelectedItem();
+    }
+
+    @Override
+    public Reservas obterModelo() {
+        String idString = view.getTxfId().getText();
+        int id = Integer.parseInt(idString);
+        Colaborador colaborador = obterColaborador();
+        Servico servico = obterServico();
+        String dataReserva = view.getTxfDataReserva().getText();
+        String dataEntrega = view.getTxfDataEntrega().getText();
+        String hora = view.getTxfHora().getText();
+        String dataHora = dataEntrega + " " + hora;
+        String observacao = view.getjTxaObservacao().getText();
+        
+        Reservas reservas = new Reservas(id, colaborador, servico, dataReserva, dataHora, observacao);
+        return reservas;
+    }
+
+    @Override
+    public void limparTela() {
+       view.getTxfId().setText("0");
+       view.getTxfDataReserva().setText("");
+       view.getTxfDataEntrega().setText("");
+       view.getTxfHora().setText("");
+       view.getjTxaObservacao().setText("");
     }
 }

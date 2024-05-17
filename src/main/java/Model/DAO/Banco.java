@@ -5,7 +5,7 @@
  */
 package Model.DAO;
 
-import Model.Reserva;
+import Model.Reservas;
 import Model.Colaborador;
 import Model.Servico;
 import Model.Usuario;
@@ -21,7 +21,7 @@ public class Banco {
     public static ArrayList<Usuario> usuario;
     public static ArrayList<Colaborador> colaborador;
     public static ArrayList<Servico> servico;
-    public static ArrayList<Reserva> reservar;
+    public static ArrayList<Reservas> reservar;
     
     
     public static void inicia() throws ParseException{
@@ -30,7 +30,7 @@ public class Banco {
         usuario = new ArrayList<Usuario>();
         colaborador = new ArrayList<Colaborador>();
         servico = new ArrayList<Servico>();
-        reservar = new ArrayList<Reserva>();
+        reservar = new ArrayList<Reservas>();
         
         //criando elementos
         
@@ -49,9 +49,9 @@ public class Banco {
         Servico servico5 = new Servico(5, "Monitor");
         Servico servico6 = new Servico(6, "Impressora");
 
-        Reserva reservar1 = new Reserva(1, colaborador1, servico2, "26/04/2024", "29/04/2024 08:30");
-        Reserva reservar2 = new Reserva(2, colaborador3, servico4, "26/04/2024", "29/04/2024 10:30");
-        Reserva reservar3 = new Reserva(3, colaborador4, servico1, "26/04/2024", "29/04/2024 13:00");
+        Reservas reservar1 = new Reservas(1, colaborador1, servico2, "26/04/2024", "29/04/2024 08:30");
+        Reservas reservar2 = new Reservas(2, colaborador3, servico4, "26/04/2024", "29/04/2024 10:30");
+        Reservas reservar3 = new Reservas(3, colaborador4, servico1, "26/04/2024", "29/04/2024 13:00");
         
         //Adiciona Elementos na lista
         usuario.add(usuario1);

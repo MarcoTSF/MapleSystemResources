@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  *
  * @author mtsfs
  */
-public class Reserva {
+public class Reservas {
     private int id;
     private Colaborador colaborador;
     private Servico servico;
@@ -22,20 +22,25 @@ public class Reserva {
     private Date dataEntrega;
     private String observacao;
 
-    public Reserva(int id, Colaborador colaborador, Servico servico, String dataReserva, String dataEntrega) {
+    public Reservas(int id, Colaborador colaborador, Servico servico, String dataReserva, String dataEntrega) {
         this.id = id;
         this.colaborador = colaborador;
         this.servico = servico;
         try {
             this.dataReserva = new SimpleDateFormat("dd/MM/yyyy").parse(dataReserva);
         } catch (ParseException ex) {
-            Logger.getLogger(Reserva.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Reservas.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
             this.dataEntrega = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(dataEntrega);
         } catch (ParseException ex) {
-            Logger.getLogger(Reserva.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Reservas.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    public Reservas(int id, Colaborador colaborador, Servico servico, String dataReserva, String dataEntrega, String observacao) {
+        this(id, colaborador, servico, dataReserva, dataEntrega);
+        this.observacao = observacao;
     }
 
     public int getId() {
